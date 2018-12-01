@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ name }}</title>
+        {% load static %}
+        <link rel='stylesheet' href="{% static "css/index.css" %}" />
+    </head>
+    </body>
+    <h1>{{ name }}</h1>
+    <h2>It is {% now "Js F Y H:i"%}
+    {% block main %} {% endblock %}
+    </body>
+</html>
