@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 
 {% block  main %}
+<br />
+{{ result }}
 <form method='post'> {% csrf_token %}
-    {{ form.as_p}}
+    <input type='text' name='username' />
+    <input type='text' name='password' />
     <button type='submit'>로그인</button>
 </form>
 <a href='/'>회원가입</a>
