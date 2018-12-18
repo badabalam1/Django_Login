@@ -1,9 +1,12 @@
-from django.conf.urls import url, include
+from django.conf.urls import url
+from django.contrib import admin
 from . import views
 
+app_name = 'api'
+
 urlpatterns = [
-    url(r'^main/$', views.main, name='main'),
-    url(r'^$', views.index, name='register1'),
-    url(r'^login/$', views.Login, name='login'),
-    url(r'^logout/$', views.Logout, name='logout'),
+    url(r'^accounts/login/$', views.UserLoginView.as_view(), name='login'),
+    url(r'^accounts/signup/$', views.CreateUserView.as_view(), name='signup'),
+    url(r'^accounts/login/done$',
+        views.ResisteredView.as_view(), name='create_user_done')
 ]

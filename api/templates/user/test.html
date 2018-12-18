@@ -1,8 +1,0 @@
-{% extends 'base.html' %}
-
-{% block main %}
-<form method='post'> {% csrf_token %}
-<input type='text' name='username' />
-<button type='submit'>버튼</button>
-</form>
-{% endblock main %}
